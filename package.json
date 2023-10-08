@@ -1,5 +1,5 @@
 {
-  "name": "my-remix-app",
+  "name": "react18-themes-remix-example",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -10,17 +10,18 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^2.0.0",
-    "@remix-run/node": "^2.0.0",
-    "@remix-run/react": "^2.0.0",
-    "@remix-run/serve": "^2.0.0",
+    "@remix-run/css-bundle": "^2.0.1",
+    "@remix-run/node": "^2.0.1",
+    "@remix-run/react": "^2.0.1",
+    "@remix-run/serve": "^2.0.1",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react18-themes": "^1.0.8"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.0.0",
-    "@remix-run/eslint-config": "^2.0.0",
+    "@remix-run/dev": "^2.0.1",
+    "@remix-run/eslint-config": "^2.0.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.38.0",
