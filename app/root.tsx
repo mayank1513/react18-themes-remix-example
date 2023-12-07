@@ -8,7 +8,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { ThemeSwitcher } from "react18-themes";
+import { ColorSwitch, ThemeSwitcher } from "react18-themes";
+import "react18-themes/styles.css"; /** this is not working */
+import {
+  RemixServerTarget,
+  loader,
+} from "react18-themes/server/remix/index.js";
 import ColorSchemePreference from "./color-scheme-preference";
 import ThemeSelector from "./theme-selector";
 import DarkThemeSelector from "./dark-theme-selector";
@@ -21,6 +26,8 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+export { loader };
+
 export default function App() {
   return (
     <html lang="en">
@@ -31,6 +38,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <RemixServerTarget />
         <ThemeSwitcher />
         <div className="container">
           <main className={`${styles.main}`}>
@@ -65,6 +73,7 @@ export default function App() {
                 <p>Unleash the power of React Server Components!</p>
               </div>
             </div>
+            <ColorSwitch />
             <div className={[styles.center, styles.prefs].join(" ")}>
               <div>
                 <ColorSchemePreference />
